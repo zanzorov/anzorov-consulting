@@ -201,7 +201,7 @@ export default function Contact() {
                       control={form.control}
                       name="acceptTerms"
                       render={({ field }) => (
-                        <FormItem className="col-span-2 flex items-center gap-2">
+                        <FormItem className="col-span-2 flex items-center gap-2 flex-wrap sm:flex-nowrap">
                           <FormControl>
                             <Checkbox
                               checked={field.value}
@@ -209,12 +209,12 @@ export default function Contact() {
                               className="cursor-pointer border-custom-color data-[state=checked]:bg-[#112D4E] data-[state=checked]:text-white"
                             />
                           </FormControl>
-                          <FormLabel>
-                            Ich stimme der
+                          <FormLabel className='flex flex-wrap'>
+                            <span>Ich stimme der</span>
                             <Link href="/datenschutz" className="underline">
                               Datenschutzerklärung
                             </Link>
-                            zu.
+                            <span>zu.</span>
                           </FormLabel>
                         </FormItem>
                       )}

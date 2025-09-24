@@ -11,7 +11,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel } from '@/components/ui/form';
 
-import { MailIcon, MapPinIcon, Clock, PhoneIcon, Loader } from 'lucide-react';
+import { MailIcon, MapPinIcon, Clock, Loader, MessageCircle, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 import { toast } from 'sonner';
 import { useState } from 'react';
@@ -77,7 +77,7 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="mt-24 grid lg:grid-cols-2 gap-16 md:gap-10">
+        <div className="mt-16 lg:mt-24 grid lg:grid-cols-2 gap-16 md:gap-10">
           {/* Kontakt-Infos */}
           <div className="grid grid-cols-2 gap-x-8 gap-y-12">
             <div>
@@ -85,8 +85,10 @@ export default function Contact() {
                 <MailIcon color="white" />
               </div>
               <h3 className="mt-6 font-semibold text-xl">E-Mail</h3>
-              <p className="my-2.5 text-muted-foreground">Unser Team ist jederzeit erreichbar.</p>
-              <Link className="font-medium text-primary" href="mailto:info@anzorov-cons.de">
+              <p className="my-2.5 text-muted-foreground">
+                Schreiben Sie uns – wir melden uns schnellstmöglich zurück.
+              </p>
+              <Link className="font-medium text-primary hover:underline" href="mailto:info@anzorov-cons.de">
                 info@anzorov-cons.de
               </Link>
             </div>
@@ -94,11 +96,11 @@ export default function Contact() {
               <div className="bg-custom-dark h-12 w-12 flex items-center justify-center rounded-full">
                 <Clock color="white" />
               </div>
-              <h3 className="mt-6 font-semibold text-xl">Öffnungszeiten</h3>
+              <h3 className="mt-6 font-semibold text-xl">Bürozeiten</h3>
               <p className="my-2.5 text-muted-foreground">Wir sind für Sie erreichbar von:</p>
-              <Link className="font-medium text-primary" href="#">
-                Montag – Freitag <br /> 09:00 – 17:00 Uhr
-              </Link>
+              <div className="font-medium text-primary">
+                Montag – Freitag <br /> 09:00 – 12:00 Uhr <br /> 14:00 – 17:00 Uhr
+              </div>
             </div>
             <div>
               <div className="bg-custom-dark h-12 w-12 flex items-center justify-center rounded-full">
@@ -106,20 +108,28 @@ export default function Contact() {
               </div>
               <h3 className="mt-6 font-semibold text-xl">Büro</h3>
               <p className="my-2.5 text-muted-foreground">Besuchen Sie uns gerne in unserem Büro.</p>
-              <Link className="font-medium text-primary" href="https://maps.google.com" target="_blank">
+              <Link
+                className="font-medium text-primary hover:underline"
+                href="https://www.google.com/maps/search/?api=1&query=Eugen-Richter-Straße+45,+99085+Erfurt"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Eugen-Richter-Straße 45 / 4.OG <br /> D-99085 Erfurt
               </Link>
             </div>
             <div>
               <div className="bg-custom-dark h-12 w-12 flex items-center justify-center rounded-full">
-                <PhoneIcon color="white" />
+                <MessageCircle color="white" />
               </div>
-              <h3 className="mt-6 font-semibold text-xl">Telefon</h3>
-              <p className="my-2.5 text-muted-foreground">
-                Rufen Sie uns gerne direkt an – wir beraten Sie persönlich.
-              </p>
-              <Link className="font-medium text-primary" href="tel:+49017621864109">
-                +49 (0)176 / 218 64 109
+              <h3 className="mt-6 font-semibold text-xl">WhatsApp</h3>
+              <p className="my-2.5 text-muted-foreground">Schnelle Hilfe? Einfach per WhatsApp kontaktieren.</p>
+              <Link
+                className="font-medium text-primary inline-flex items-center gap-1 hover:underline"
+                href="https://wa.me/4936121523277"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Jetzt Chat starten <ExternalLink className="size-4" />
               </Link>
             </div>
           </div>
@@ -209,7 +219,7 @@ export default function Contact() {
                               className="cursor-pointer border-custom-color data-[state=checked]:bg-[#112D4E] data-[state=checked]:text-white"
                             />
                           </FormControl>
-                          <FormLabel className='flex flex-wrap'>
+                          <FormLabel className="flex flex-wrap">
                             <span>Ich stimme der</span>
                             <Link href="/datenschutz" className="underline">
                               Datenschutzerklärung

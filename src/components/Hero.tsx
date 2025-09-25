@@ -13,7 +13,7 @@ export default function HeroSection() {
     <>
       <HeroHeader />
         <section className='bg-custom-light'>
-          <div className="pb-24 pt-12 md:pb-32 lg:pb-40 lg:pt-44">
+          <div className="pb-24 pt-16 md:pb-32 lg:pb-40 lg:pt-44">
             <div className="relative mx-auto flex max-w-6xl flex-col px-6 lg:grid lg:grid-cols-2 lg:gap-8">
               {/* Левая колонка: текст */}
               <div className="mx-auto max-w-lg text-center lg:ml-0 lg:text-left lg:flex lg:flex-col lg:justify-center">

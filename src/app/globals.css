@@ -92,7 +92,7 @@
 }
 
 .header-custom-bg {
-  background-color: color-mix(in oklab, #F9F7F7 80%, transparent);
+  background-color: color-mix(in oklab, #DBE2EF 80%, transparent);
 }
 
 .bg-custom-dark {

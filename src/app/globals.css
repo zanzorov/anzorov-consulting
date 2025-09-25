@@ -88,9 +88,11 @@
 
 .footer-custom-bg {
   /* background-color: #212A3E; */
-  /* background-color: #F9F7F7; */
   background-color: #e0dede
-  /* background-color: var(--chart-5) */
+}
+
+.header-custom-bg {
+  background-color: color-mix(in oklab, #F9F7F7 80%, transparent);
 }
 
 .bg-custom-dark {

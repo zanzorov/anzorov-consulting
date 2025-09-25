@@ -10,16 +10,16 @@ export default function StatsSection() {
 
                 <div className="grid gap-2 *:text-center md:grid-cols-3 dark:[--color-muted:var(--color-zinc-900)]">
                     <div className="bg-custom-light rounded-(--radius) space-y-2 py-6 md:space-y-4">
-                        <div className="text-4xl md:text-5xl font-bold">120+</div>
+                        <div className="text-4xl md:text-5xl font-bold">40+</div>
                         <p className="font-bold">Zufriedene Kunden</p>
                     </div>
                     <div className="bg-custom-light rounded-(--radius) space-y-2 py-6 md:space-y-4">
-                        <div className="text-4xl md:text-5xl font-bold">7+</div>
+                        <div className="text-4xl md:text-5xl font-bold">5+</div>
                         <p className="font-bold">Jahre Erfahrung</p>
                     </div>
                     <div className="bg-custom-light rounded-(--radius) space-y-2 py-6 md:space-y-4">
-                        <div className="text-4xl md:text-5xl font-bold">300+</div>
-                        <p className="font-bold">Erfolgreiche Projekte</p>
+                        <div className="text-4xl md:text-5xl font-bold">15+</div>
+                        <p className="font-bold">Branchenexpertise</p>
                     </div>
                 </div>
             </div>

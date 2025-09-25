@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { Logo, LogoCustom } from '@/components/Logo';
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import React from 'react';
@@ -16,12 +16,13 @@ export const HeroHeader = () => {
   const [menuState, setMenuState] = React.useState(false);
   return (
     <header className="mb-8 lg:mb-0">
-      <nav data-state={menuState && 'active'} className="bg-background/80 fixed z-20 w-full border-b backdrop-blur-3xl">
+      <nav data-state={menuState && 'active'} className="header-custom-bg fixed z-20 w-full border-b backdrop-blur-3xl">
         <div className="mx-auto max-w-6xl px-6 transition-all duration-300">
           <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
             <div className="flex w-full items-center justify-between gap-12 lg:w-auto">
               <Link href="/" aria-label="home">
-                <LogoCustom />
+                {/* <LogoCustom /> */}
+                <Image alt="logo" src="/images/logo-consulting.png" width={100} height={56} priority />
               </Link>
 
               <button
@@ -67,7 +68,7 @@ export const HeroHeader = () => {
               </div>
               <div className="md:w-fit">
                 <Button asChild size="sm" className="btn-custom-bg w-full">
-                  <Link href="#kontakt">
+                  <Link href="#kontakt" onClick={() => setMenuState(false)}>
                     <span>Kostenloses Erstgespräch</span>
                   </Link>
                 </Button>

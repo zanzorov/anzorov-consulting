@@ -43,7 +43,7 @@ export default function HeroSection() {
               <div className="mt-12 lg:mt-0 relative w-full aspect-[4/3] lg:aspect-auto">
                 <Image
                   className="absolute inset-0 h-full w-full object-cover rounded-2xl"
-                  src="/images/calc-pen.jpg"
+                  src="/images/berlin.jpg"
                   alt="Abstract Object"
                   fill
                   priority

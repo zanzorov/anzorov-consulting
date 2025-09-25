@@ -1,5 +1,5 @@
-import { Logo, LogoCustom } from '@/components/Logo';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const links = [
   {
@@ -39,12 +39,13 @@ const links = [
 
 export default function Footer() {
   return (
-    <footer className="footer-custom-bg border-b border-t bg-white pt-20 dark:bg-transparent">
+    <footer className="footer-custom-bg border-b border-t bg-white pt-12 lg:pt-20 dark:bg-transparent">
       <div className="mx-auto max-w-screen-xl px-6">
         <div className="grid gap-12 lg:grid-cols-5">
-          <div className="lg:col-span-2">
-            <Link href="/" aria-label="home" >
-              <LogoCustom />
+          <div className="flex justify-center lg:block lg:col-span-2">
+            <Link href="/" aria-label="home">
+              {/* <LogoCustom /> */}
+              <Image alt="logo" src="/images/logo-consulting.png" width={200} height={112.5} priority />
             </Link>
           </div>
 

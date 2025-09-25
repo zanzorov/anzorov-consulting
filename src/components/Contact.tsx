@@ -79,12 +79,15 @@ export default function Contact() {
 
         <div className="mt-16 lg:mt-24 grid lg:grid-cols-2 gap-16 md:gap-10">
           {/* Kontakt-Infos */}
-          <div className="grid grid-cols-2 gap-x-8 gap-y-12">
+          <div className="grid sm:grid-cols-2 gap-x-8 gap-y-12">
             <div>
-              <div className="bg-custom-dark h-12 w-12 flex items-center justify-center rounded-full">
-                <MailIcon color="white" />
+              <div className="flex items-center gap-4 sm:block">
+                <div className="bg-custom-dark h-12 w-12 flex items-center justify-center rounded-full">
+                  <MailIcon color="white" />
+                </div>
+                <h3 className="sm:mt-6 font-semibold text-xl">E-Mail</h3>
               </div>
-              <h3 className="mt-6 font-semibold text-xl">E-Mail</h3>
+
               <p className="my-2.5 text-muted-foreground">
                 Schreiben Sie uns – wir melden uns schnellstmöglich zurück.
               </p>
@@ -93,20 +96,26 @@ export default function Contact() {
               </Link>
             </div>
             <div>
-              <div className="bg-custom-dark h-12 w-12 flex items-center justify-center rounded-full">
-                <Clock color="white" />
+              <div className="flex items-center gap-4 sm:block">
+                <div className="bg-custom-dark h-12 w-12 flex items-center justify-center rounded-full">
+                  <Clock color="white" />
+                </div>
+                <h3 className="sm:mt-6 font-semibold text-xl">Bürozeiten</h3>
               </div>
-              <h3 className="mt-6 font-semibold text-xl">Bürozeiten</h3>
+
               <p className="my-2.5 text-muted-foreground">Wir sind für Sie erreichbar von:</p>
               <div className="font-medium text-primary">
                 Montag – Freitag <br /> 09:00 – 12:00 Uhr <br /> 14:00 – 17:00 Uhr
               </div>
             </div>
             <div>
-              <div className="bg-custom-dark h-12 w-12 flex items-center justify-center rounded-full">
-                <MapPinIcon color="white" />
+              <div className="flex items-center gap-4 sm:block">
+                <div className="bg-custom-dark h-12 w-12 flex items-center justify-center rounded-full">
+                  <MapPinIcon color="white" />
+                </div>
+                <h3 className="sm:mt-6 font-semibold text-xl">Büro</h3>
               </div>
-              <h3 className="mt-6 font-semibold text-xl">Büro</h3>
+
               <p className="my-2.5 text-muted-foreground">Besuchen Sie uns gerne in unserem Büro.</p>
               <Link
                 className="font-medium text-primary hover:underline"
@@ -118,10 +127,13 @@ export default function Contact() {
               </Link>
             </div>
             <div>
-              <div className="bg-custom-dark h-12 w-12 flex items-center justify-center rounded-full">
-                <MessageCircle color="white" />
+              <div className="flex items-center gap-4 sm:block">
+                <div className="bg-custom-dark h-12 w-12 flex items-center justify-center rounded-full">
+                  <MessageCircle color="white" />
+                </div>
+                <h3 className="sm:mt-6 font-semibold text-xl">WhatsApp</h3>
               </div>
-              <h3 className="mt-6 font-semibold text-xl">WhatsApp</h3>
+
               <p className="my-2.5 text-muted-foreground">Schnelle Hilfe? Einfach per WhatsApp kontaktieren.</p>
               <Link
                 className="font-medium text-primary inline-flex items-center gap-1 hover:underline"
@@ -136,7 +148,7 @@ export default function Contact() {
 
           {/* Formular */}
           <Card className="card-custom-bg shadow-none">
-            <CardContent className="p-6 md:p-10">
+            <CardContent className="p-4 md:p-10">
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)}>
                   <div className="grid md:grid-cols-2 gap-x-8 gap-y-5">

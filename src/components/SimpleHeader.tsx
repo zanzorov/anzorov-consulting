@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { LogoCustom } from '@/components/Logo';
+import Image from 'next/image';
 import { ArrowLeft } from 'lucide-react';
 
 export const SimpleHeader = () => {
@@ -16,8 +16,9 @@ export const SimpleHeader = () => {
             <ArrowLeft className="size-4" aria-hidden="true" />
             Zurück zur Startseite
           </Link>
-          <Link href="/" aria-label="home">
-            <LogoCustom />
+          <Link href="/" aria-label="home" className="block w-[100px] h-[67px]">
+            {/* <LogoCustom /> */}
+            <Image alt="logo" src="/images/logo-consulting.png" width={100} height={67} priority />
           </Link>
         </div>
       </nav>

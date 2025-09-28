@@ -43,9 +43,9 @@ export default function Footer() {
       <div className="mx-auto max-w-screen-xl px-6">
         <div className="grid gap-12 lg:grid-cols-5">
           <div className="flex justify-center lg:block lg:col-span-2">
-            <Link href="/" aria-label="home">
+            <Link href="/" aria-label="home" className="block w-[200px] h-[134px]">
               {/* <LogoCustom /> */}
-              <Image alt="logo" src="/images/logo-consulting.png" width={200} height={112.5} priority />
+              <Image alt="logo" src="/images/logo-consulting.png" width={200} height={134} priority />
             </Link>
           </div>
 

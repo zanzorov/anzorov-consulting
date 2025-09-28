@@ -20,9 +20,9 @@ export const HeroHeader = () => {
         <div className="mx-auto max-w-6xl px-6 transition-all duration-300">
           <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
             <div className="flex w-full items-center justify-between gap-12 lg:w-auto">
-              <Link href="/" aria-label="home">
+              <Link href="/" aria-label="home" className="block w-[100px] h-[67px]">
                 {/* <LogoCustom /> */}
-                <Image alt="logo" src="/images/logo-consulting.png" width={100} height={56} priority />
+                <Image alt="logo" src="/images/logo-consulting.png" width={100} height={67} priority />
               </Link>
 
               <button
